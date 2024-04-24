@@ -1,0 +1,14 @@
+htop
+screen
+tmux
+jq
+tldr
+pipx
+thefuck
+bat
+fzf
+fd
+neovim
+node
+jesseduffield/lazygit/lazygit
+ripgrep
