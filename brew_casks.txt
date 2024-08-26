@@ -1,7 +1,8 @@
-appcleaner
-hiddenbar
-stats
-itsycal
-raycast
 alt-tab
+appcleaner
 cheatsheet
+hiddenbar
+itsycal
+miniconda
+raycast
+stats
