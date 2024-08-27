@@ -93,7 +93,7 @@ eval $(thefuck --alias)
 set rtp+=/opt/homebrew/opt/fzf
 ```
 
-## Make Sure Rye Still Works & Install JupyterLab
+## Make Sure Rye Still Works
 
 Check your `.zhsrc` file to be sure rye is sourced last:
 ```shell
@@ -101,14 +101,15 @@ Check your `.zhsrc` file to be sure rye is sourced last:
 source "$HOME/.rye/env"
 ```
 
-Then install jupyter lab globally with rye:
+Don't install jupyterlab globally because then it won't have access to the project's venv which will make it useless.  Instead install it for each project as follows:
 ```shell
-rye install jupyterlab --extra-requirement jupyterlab_vim
-# added an alias to zshrc if not copied
-alias jlab='jupyter-lab'
+rye add jupyterlab --dev
+rye add jupyterlab_vim --dev
+
+# then run with
+rye run jupyter-lab
+
+# or add the following to your .zshrc
+alias jlab="rye run jupyter-lab"
 ```
-
-
-
-
 
