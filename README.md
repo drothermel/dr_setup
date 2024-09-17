@@ -47,7 +47,6 @@ cp dr_setup/dotfiles/.zshrc ~/.zshrc
 curl -sSf https://rye.astral.sh/get | bash
 
 # Added shims and autocomplete
-echo 'source "$HOME/.rye/env"' >> ~/.zshrc
 mkdir $ZSH_CUSTOM/plugins/rye
 rye self completion -s zsh > $ZSH_CUSTOM/plugins/rye/_rye
 
