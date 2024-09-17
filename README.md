@@ -46,15 +46,14 @@ cp dr_setup/dotfiles/.zshrc ~/.zshrc
 # Requires answering some questions
 curl -sSf https://rye.astral.sh/get | bash
 
-# Added shims and autocomplete
-mkdir $ZSH_CUSTOM/plugins/rye
-rye self completion -s zsh > $ZSH_CUSTOM/plugins/rye/_rye
-
 # Run script from github/drothermel/dr_setup
 ./dr_setup/zsh_plugin_setup.sh
 
 # Ignore any errors here, need to activate rye
 exec zsh
+
+# Added shims and autocomplete for rye (if not done before)
+rye self completion -s zsh > $ZSH_CUSTOM/plugins/rye/_rye
 
 # # IF WE DIDN't COPY .zshrc, ADD:
 source $ZSH_CUSTOM/plugins/k/k.sh
