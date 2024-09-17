@@ -44,7 +44,7 @@ cp dr_setup/dotfiles/.zshrc ~/.zshrc
 
 ## Install Rye here if you didn't earlier
 # Requires answering some questions
-curl -sSf https://rye-up.com/get | bash
+curl -sSf https://rye.astral.sh/get | bash
 
 # Added shims and autocomplete
 echo 'source "$HOME/.rye/env"' >> ~/.zshrc
