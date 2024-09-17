@@ -23,9 +23,9 @@ rye self completion -s zsh > $ZSH_CUSTOM/plugins/rye/_rye
 
 ```
 
-## Install & Setup zsh
+## Setup zsh
 
-Install:
+Install ohmyzsh:
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
@@ -42,11 +42,20 @@ Copy in .zshrc and setup plugins:
 # Copy .zshrc from github/drothermel/dr_setup
 cp dr_setup/dotfiles/.zshrc ~/.zshrc
 
-# Ignore any errors here, need to activate rye
-exec zsh
+## Install Rye here if you didn't earlier
+# Requires answering some questions
+curl -sSf https://rye-up.com/get | bash
+
+# Added shims and autocomplete
+echo 'source "$HOME/.rye/env"' >> ~/.zshrc
+mkdir $ZSH_CUSTOM/plugins/rye
+rye self completion -s zsh > $ZSH_CUSTOM/plugins/rye/_rye
 
 # Run script from github/drothermel/dr_setup
 ./dr_setup/zsh_plugin_setup.sh
+
+# Ignore any errors here, need to activate rye
+exec zsh
 
 # # IF WE DIDN't COPY .zshrc, ADD:
 source $ZSH_CUSTOM/plugins/k/k.sh
@@ -54,6 +63,7 @@ source "$HOME/.rye/env"
 # before export ZSH="$HOME/.oh-my-zsh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
+## Mac Only
 # Setup fzf by running (my answers: y, y, n) (based on this)
 sh "$(brew --prefix fzf)/install"
 ```
