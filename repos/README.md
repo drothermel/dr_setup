@@ -11,3 +11,10 @@ Also soon-to-be included here are guides for the common dev libraries that I use
 - rye
 - hydra
 - wandb
+
+## Included File Templates
+
+`.gitignore`
+- Python base from github
+- Vim patterns also from github
+- IPynb patterns from jupyter
