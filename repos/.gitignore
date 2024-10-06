@@ -1,3 +1,13 @@
+# ------ Ipynb Ignore --------
+# https://github.com/jupyter/notebook/blob/main/.gitignore
+
+*.bundle.*
+lib/
+node_modules/
+*.egg-info/
+.ipynb_checkpoints
+*.tsbuildinfo
+
 # ------ Hydra Ignore --------
 outputs/
 
