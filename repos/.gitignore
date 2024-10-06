@@ -1,3 +1,5 @@
+# ------ Hydra Ignore --------
+outputs/
 
 # ------ Vim Gitignore --------
 # https://github.com/github/gitignore/blob/main/Global/Vim.gitignore
